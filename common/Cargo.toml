@@ -1,0 +1,14 @@
+[workspace]
+
+members=[
+    "uniffi-bindgen",
+    "core-app"
+]
+
+[profile.release]
+lto="thin"
+opt-level="s"
+
+[workspace.dependencies]
+uniffi ={version = "0.26.1",features = ["cli","build"]}
+async-trait = "0.1.77"
